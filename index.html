@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artsy Bliss Atelier | Beads, Jewellery & Accessories</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Italiana&family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f2efe9;--card:#fbf9f5;--ink:#3b2418;--mute:#78604e;--line:#d6c9ba;--gold:#a8741a;--b1:#fffdf8;--b2:#c9a07a;--b3:#8a5a3a;--b4:#4a2a1a;--wa:#1f7a4d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e130c;--card:#2a1b12;--ink:#f1e7da;--mute:#c4aa93;--line:#4a3427;--gold:#e0a64a;--b4:#7a4a30;--wa:#2f9d68}}
+:root[data-theme="dark"]{--bg:#1e130c;--card:#2a1b12;--ink:#f1e7da;--mute:#c4aa93;--line:#4a3427;--gold:#e0a64a;--b4:#7a4a30;--wa:#2f9d68}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Poppins,system-ui,sans-serif}
+h1,h2,h3,p{margin:0}
+.disp{font-family:"Alfa Slab One",Georgia,serif;font-weight:400}
+.script{font-family:Italiana,Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.logo{font:1.7rem Italiana,serif;text-decoration:none}
+.top nav a{margin-left:20px;text-decoration:none;color:var(--mute);font-size:.92rem}
+.top nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:clamp(40px,8vw,100px) 0}
+.hero h1{font-size:clamp(2.8rem,9.5vw,6.8rem);line-height:.96}
+.hero .script{font-size:1.5rem;color:var(--gold);margin-bottom:14px}
+.hero p.lead{max-width:46ch;color:var(--mute);font-size:1.08rem;margin:22px 0 28px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:13px 26px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font:500 1rem Poppins,sans-serif}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.wa{background:var(--wa);color:#fff;width:100%;justify-content:center}
+.strand{position:relative;display:flex;flex-direction:column;align-items:center;min-height:440px}
+.strand::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--line);transform:translateX(-50%)}
+.bead{position:relative;width:var(--s);height:var(--s);border-radius:50%;margin-top:-4px;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.55),transparent 34%),var(--c);box-shadow:inset -6px -8px 14px rgba(0,0,0,.28)}
+.sec{padding:clamp(36px,6vw,72px) 0}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+.sec-h h2{font-size:clamp(1.8rem,4.5vw,3rem)}
+.sec-h .script{color:var(--gold);font-size:1.5rem}
+.row{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1.05rem;font-weight:500}
+.row small{color:var(--mute);display:block;line-height:1.3}
+.sw{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.5),transparent 36%),var(--c);box-shadow:inset -4px -5px 9px rgba(0,0,0,.28);border:1px solid var(--line)}
+.sw.mix{background:conic-gradient(#fffdf8 0 25%,#c9a07a 0 50%,#8a5a3a 0 75%,#4a2a1a 0)}
+.noswatch{grid-template-columns:1fr auto}
+.acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.add{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer;font:500 .88rem Poppins,sans-serif;white-space:nowrap}
+.add:hover{background:var(--ink);color:var(--bg)}
+.add.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.tag{color:var(--gold);font:1.05rem "Alfa Slab One",serif}
+.pill{display:inline-block;margin:18px 0 0;padding:8px 18px;border:1.5px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:500;font-size:.92rem}
+.faq{display:grid;gap:12px;max-width:780px;margin-top:24px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--mute)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:12px;align-content:start}
+.mp{font:2rem "Alfa Slab One",serif;color:var(--gold);letter-spacing:.03em}
+.cp{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;font:500 .85rem Poppins,sans-serif;justify-self:start}
+.soc{display:flex;flex-wrap:wrap;gap:10px}
+.soc a{border:1.5px solid var(--ink);border-radius:999px;padding:8px 16px;text-decoration:none;font-size:.92rem}
+.soc a:hover{background:var(--ink);color:var(--bg)}
+footer{border-top:2px solid var(--ink);margin-top:40px;padding:36px 0 110px}
+footer .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+footer .script{font-size:1.8rem}
+footer p,footer a{color:var(--mute);font-size:.92rem}
+footer a{display:block;text-decoration:none;line-height:2}
+footer a:hover{color:var(--ink)}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--wa);color:#fff;border:0;border-radius:999px;padding:14px 22px;font:600 1rem Poppins,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;display:none}
+.scrim.open{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:40;transform:translateX(105%);transition:transform .28s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);box-shadow:-10px 0 40px rgba(0,0,0,.3)}
+.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dh h2{font-size:1.4rem}
+.x{background:none;border:0;color:var(--ink);font-size:1.8rem;cursor:pointer;line-height:1}
+.db{overflow:auto;padding:16px 22px;flex:1;display:grid;gap:16px;align-content:start}
+.li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:.92rem}
+.li small{color:var(--mute);grid-column:1}
+.q{display:flex;align-items:center;gap:8px;grid-row:1/3;grid-column:2}
+.q button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+label{font-size:.85rem;font-weight:600;display:grid;gap:5px}
+input,select,textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:400 .95rem Poppins,sans-serif}
+.tot{display:flex;justify-content:space-between;font-weight:600}
+.df{padding:16px 22px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:10px;background:var(--card)}
+.fine{font-size:.8rem;color:var(--mute)}
+.pay{border:1.5px dashed var(--gold);border-radius:12px;padding:12px 14px;font-size:.9rem}
+@media(max-width:780px){.hero,.cols,footer .grid{grid-template-columns:1fr}.strand{min-height:0;flex-direction:row;justify-content:center;overflow:hidden;padding:6px 0}.strand::before{top:50%;bottom:auto;left:0;right:0;width:auto;height:3px;transform:none}.bead{margin:0 -3px;width:calc(var(--s)*.6);height:calc(var(--s)*.6)}.top nav a{margin-left:12px;font-size:.82rem}.row{grid-template-columns:auto 1fr}.row .acts{grid-column:1/-1;justify-content:flex-start}.noswatch{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drawer{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="#top">Artsy Bliss</a><nav aria-label="Main"><a href="#beads">Beads</a><a href="#jewellery">Jewellery</a><a href="#accessories">Accessories</a><a href="#shipping">Shipping</a><a href="#contact">Pay</a></nav></header>
+
+<main id="top">
+<div class="hero">
+  <div>
+    <div class="script">Artsy Bliss Atelier</div>
+    <h1 class="disp">The perfect atelier for beads, jewellery and accessories.</h1>
+    <p class="lead">Build your order below, choose how you want it delivered, and send it straight to our WhatsApp business line. Pay with M-Pesa Send Money.</p>
+    <p><a class="btn" href="#beads">Start your order</a> <button class="btn alt" type="button" data-open>Open order bag</button></p>
+  </div>
+  <div class="strand" aria-hidden="true"><span class="bead" style="--s:64px;--c:var(--b3)"></span><span class="bead" style="--s:90px;--c:var(--b4)"></span><span class="bead" style="--s:56px;--c:var(--b2)"></span><span class="bead" style="--s:98px;--c:var(--b3)"></span><span class="bead" style="--s:60px;--c:var(--b1)"></span><span class="bead" style="--s:84px;--c:var(--b4)"></span><span class="bead" style="--s:70px;--c:var(--b2)"></span></div>
+</div>
+
+<section class="sec" id="beads">
+  <div class="sec-h"><h2 class="disp">Hair beads</h2><span class="script">Mini KES 200 · Kifahari KES 650</span></div>
+  <div id="beadRows"></div>
+</section>
+<section class="sec" id="jewellery">
+  <div class="sec-h"><h2 class="disp">Jewellery</h2><span class="script">KES 800 – 5,500</span></div>
+  <div id="jewRows"></div>
+</section>
+<section class="sec" id="accessories">
+  <div class="sec-h"><h2 class="disp">Accessories</h2><span class="script">KES 200 – 500</span></div>
+  <div id="accRows"></div>
+</section>
+
+<section class="sec" id="shipping">
+  <div class="sec-h"><h2 class="disp">Shipping details &amp; FAQs</h2></div>
+  <div class="faq">
+    <details open><summary>Delivery details?</summary><p>We send your order via various courier services, i.e. Pickup Mtaani, Super Metro, Uber and Bolt.</p></details>
+    <details open><summary>What if I’m not within Nairobi?</summary><p>For international orders we use DHL Express. Within Kenya, outside Nairobi, we work with your preferred choice.</p></details>
+    <details><summary>How do I pay?</summary><p>Send money via M-Pesa to 0740793203, then share the confirmation message on WhatsApp with your order.</p></details>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="sec-h"><h2 class="disp">Contact &amp; payment</h2><span class="script">We reply on WhatsApp</span></div>
+  <div class="cols">
+    <div class="panel">
+      <h3>Talk to us</h3>
+      <p>WhatsApp business: <strong>+254 740 793 203</strong></p>
+      <a class="btn wa" href="https://wa.me/254740793203" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <div class="soc"><a href="https://www.instagram.com/artsyblissatelier" target="_blank" rel="noopener">Instagram @artsyblissatelier</a><a href="https://www.tiktok.com/@artsybliss_ke" target="_blank" rel="noopener">TikTok @artsybliss_ke</a><a href="https://www.facebook.com/share/18sQsq6FUW/" target="_blank" rel="noopener">Facebook Artsy Bliss</a><a href="https://pin.it/7Ev5m4JBB" target="_blank" rel="noopener">Pinterest</a></div>
+    </div>
+    <div class="panel">
+      <h3>Lipa Na M-Pesa</h3>
+      <p>Send Money to</p>
+      <div class="mp">0740793203</div>
+      <button class="cp" type="button" data-copy="0740793203">Copy number</button>
+      <p class="fine">After paying, send the M-Pesa confirmation on WhatsApp so we can confirm your order.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="grid">
+    <div><div class="script">Artsy Bliss Atelier</div><p>The perfect atelier for beads, jewellery and accessories.</p></div>
+    <div><p><strong>Order &amp; pay</strong></p><a href="https://wa.me/254740793203" target="_blank" rel="noopener">WhatsApp +254 740 793 203</a><a href="#contact">M-Pesa Send Money: 0740793203</a></div>
+    <div><p><strong>Follow</strong></p><a href="https://www.instagram.com/artsyblissatelier" target="_blank" rel="noopener">IG @artsyblissatelier</a><a href="https://www.tiktok.com/@artsybliss_ke" target="_blank" rel="noopener">TikTok @artsybliss_ke</a><a href="https://www.facebook.com/share/18sQsq6FUW/" target="_blank" rel="noopener">Facebook Artsy Bliss</a><a href="https://pin.it/7Ev5m4JBB" target="_blank" rel="noopener">Pinterest</a></div>
+  </div>
+</footer>
+</div>
+
+<button class="fab" type="button" data-open aria-label="Open order bag">Order bag (<span id="cnt">0</span>)</button>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Order bag" aria-hidden="true">
+  <div class="dh"><h2 class="disp">Order bag</h2><button class="x" type="button" id="close" aria-label="Close order bag">×</button></div>
+  <div class="db">
+    <div id="items"></div>
+    <label>Delivery method<select id="ship">
+      <option>Pickup Mtaani</option><option>Super Metro</option><option>Uber</option><option>Bolt</option><option>DHL Express (international)</option><option>Other courier outside Nairobi (my choice)</option>
+    </select></label>
+    <label>Your name<input id="nm" autocomplete="name"></label>
+    <label>Delivery location<input id="loc" placeholder="Area, town or country"></label>
+    <label>Notes<textarea id="nt" rows="2" placeholder="Colours, sizes, anything else"></textarea></label>
+    <div class="pay"><strong>Pay with Lipa Na M-Pesa</strong><br>Send Money: <strong>0740793203</strong> <button class="cp" type="button" data-copy="0740793203">Copy</button></div>
+  </div>
+  <div class="df">
+    <div class="tot"><span>Estimated total</span><span id="tot">KES 0</span></div>
+    <p class="fine">Jewellery ranges from KES 800 to 5,500 and accessories from KES 200 to 500, so the estimate uses the lowest price. We confirm the final total and delivery cost on WhatsApp.</p>
+    <button class="btn wa" type="button" id="send">Send order on WhatsApp</button>
+    <div class="fine" id="fb"></div>
+  </div>
+</aside>
+
+<script>
+(function(){
+var WA="254740793203",MP="0740793203";
+var colours=[["White","#fffdf8"],["Light coffee colour","#c9a07a"],["Coffee colour","#8a5a3a"],["Dark coffee colour","#4a2a1a"],["Mixed bead pack",null]];
+var jew=["Necklaces","Bracelets","Earrings","Rings","Anklets"];
+var acc=["Hair charms","Coin pouch","Mascara","Eye liner","Lip liner","Lip gloss / oil","Pocket mirror","Atomizer"];
+var bag={};
+function $(i){return document.getElementById(i)}
+function kes(n){return "KES "+n.toLocaleString("en-KE")}
+function row(h,sub,btns,sw){
+  return '<div class="row'+(sw===undefined?' noswatch':'')+'">'+(sw===undefined?'':'<div class="sw'+(sw?'':' mix')+'"'+(sw?' style="--c:'+sw+'"':'')+'></div>')+'<div><h3>'+h+'</h3><small>'+sub+'</small></div><div class="acts">'+btns+'</div></div>';
+}
+function btn(id,name,price,label,est){return '<button class="add" data-id="'+id+'" data-n="'+name+'" data-p="'+price+'" data-e="'+(est||"")+'">'+label+'</button>'}
+$("beadRows").innerHTML=colours.map(function(c){
+  return row(c[0],"Hair beads",btn("b-"+c[0]+"-m","Hair beads: "+c[0]+" (Mini pack)",200,"Mini · 200")+btn("b-"+c[0]+"-k","Hair beads: "+c[0]+" (Kifahari pack)",650,"Kifahari · 650"),c[1]);
+}).join("");
+$("jewRows").innerHTML=jew.map(function(j){return row(j,"KES 800 – 5,500",'<span class="tag">800 – 5,500</span>'+btn("j-"+j,"Jewellery: "+j,800,"Add","from"))}).join("");
+$("accRows").innerHTML=acc.map(function(a){return row(a,"KES 200 – 500",'<span class="tag">200 – 500</span>'+btn("a-"+a,"Accessory: "+a,200,"Add","from"))}).join("");
+
+function render(){
+  var ids=Object.keys(bag),n=0,t=0,h="";
+  ids.forEach(function(k){var i=bag[k];n+=i.q;t+=i.q*i.p;
+    h+='<div class="li"><strong>'+i.n+'</strong><div class="q"><button data-d="-1" data-k="'+k+'" aria-label="Fewer">−</button><span>'+i.q+'</span><button data-d="1" data-k="'+k+'" aria-label="More">+</button></div><small>'+(i.e?(i.e==="from"?"From ":"About "):"")+kes(i.p)+' each</small></div>';});
+  $("items").innerHTML=h||'<p class="fine">Your bag is empty. Add items from the price list.</p>';
+  $("cnt").textContent=n;$("tot").textContent=kes(t);
+  document.querySelectorAll(".add").forEach(function(b){var on=!!bag[b.dataset.id];b.classList.toggle("on",on);});
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest("button,a");if(!b)return;
+  if(b.classList.contains("add")){var id=b.dataset.id;if(bag[id])bag[id].q++;else bag[id]={n:b.dataset.n,p:+b.dataset.p,e:b.dataset.e,q:1};render();var c=$("cnt");c.textContent=c.textContent;return;}
+  if(b.dataset.d){var k=b.dataset.k;bag[k].q+=+b.dataset.d;if(bag[k].q<1)delete bag[k];render();return;}
+  if(b.hasAttribute("data-open")){open(true);return;}
+  if(b.dataset.copy){var t=b.dataset.copy,o=b.textContent;try{navigator.clipboard.writeText(t)}catch(x){}b.textContent="Copied";setTimeout(function(){b.textContent=o},1500);}
+});
+function open(v){$("drawer").classList.toggle("open",v);$("scrim").classList.toggle("open",v);$("drawer").setAttribute("aria-hidden",v?"false":"true");}
+$("close").onclick=$("scrim").onclick=function(){open(false)};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")open(false)});
+$("send").onclick=function(){
+  var ids=Object.keys(bag);
+  if(!ids.length){$("items").innerHTML='<p class="fine"><strong>Add at least one item before sending.</strong></p>';return;}
+  var t=0,L=ids.map(function(k){var i=bag[k];t+=i.q*i.p;return "• "+i.q+" x "+i.n+" ("+(i.e==="from"?"from ":i.e==="about"?"about ":"")+kes(i.p)+" each)"}).join("\n");
+  var m="Hello Artsy Bliss Atelier! I would like to place an order:\n\n"+L+"\n\nEstimated total: "+kes(t)+" (final total and delivery cost to be confirmed)\n\nName: "+($("nm").value||"-")+"\nDelivery method: "+$("ship").value+"\nDelivery location: "+($("loc").value||"-")+"\nNotes: "+($("nt").value||"-")+"\n\nPayment: Lipa Na M-Pesa, Send Money to "+MP+". I will share the M-Pesa confirmation here.";
+  var url="https://wa.me/"+WA+"?text="+encodeURIComponent(m),app="whatsapp://send?phone="+WA+"&text="+encodeURIComponent(m);
+  $("fb").innerHTML='If WhatsApp did not open, try <a href="'+app+'"><strong>Open in WhatsApp app</strong></a> or <a href="'+url+'" target="_blank" rel="noopener"><strong>Open WhatsApp link</strong></a>. If neither works, copy your order and paste it into a chat with +254 740 793 203.<br><button class="cp" type="button" id="cm">Copy order message</button>';
+  $("cm").onclick=function(){try{navigator.clipboard.writeText(m)}catch(x){}this.textContent="Copied";};
+  window.open(url,"_blank");
+};
+render();
+})();
+</script>
+</body>
+</html>
